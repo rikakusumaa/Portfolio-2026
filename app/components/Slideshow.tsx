@@ -3,12 +3,13 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import image1 from "../images/image1.jpg";
-import image2 from "../images/image2.jpg";
-import image3 from "../images/image3.jpg";
-import image4 from "../images/image4.jpg";
+import image1 from "../images/1.png";
+import image2 from "../images/2.png";
+import image3 from "../images/3.png";
+import image4 from "../images/4.png";
+import image5 from "../images/5.png";
 
-const images = [image1, image2, image3, image4];
+const images = [image1, image2, image3, image4, image5];
 
 export default function Slideshow() {
   const [current, setCurrent] = useState(0);
@@ -23,7 +24,7 @@ export default function Slideshow() {
 
   return (
     <section className="flex justify-center px-10 pt-8 pb-10 shadow-md">
-    <div className="relative w-[1430px] h-[550px] overflow-hidden">
+    <div className="relative w-[715px] h-[300] lg:w-[1430px] lg:h-[600px] overflow-hidden">
       <div
         className="flex h-full transition-transform duration-1500 ease-in-out"
         style={{
@@ -42,7 +43,6 @@ export default function Slideshow() {
               alt=""
               fill
               className="object-cover"
-              sizes="400px"
             />
           </div>
         ))}

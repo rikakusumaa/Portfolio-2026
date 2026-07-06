@@ -18,7 +18,7 @@ export default function Hero () {
                 <div className="flex items-end col-span-3 justify-between pb-12">
                     <div>
                         <p className="font-extralight">Presented by</p>
-                        <p className="font-medium -mt-1">X</p>
+                        <p className="font-medium -mt-1">Nizar Farhannurwafi A.</p>
                     </div>
                     <p className="font-extralight hidden md:block">2026</p>
                     <a href="#overview">

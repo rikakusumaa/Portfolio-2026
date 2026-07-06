@@ -20,7 +20,7 @@ export default function Header() {
                 </li>
 
                 <li>
-                    <a href="#" className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
+                    <a href="#about" className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
                         About
                     </a>
                 </li>
@@ -79,7 +79,7 @@ export default function Header() {
                 </li>
 
                 <li>
-                    <a href="#" onClick={() => setIsOpen(false)} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
+                    <a href="#about" onClick={() => setIsOpen(false)} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
                         About
                     </a>
                 </li>
