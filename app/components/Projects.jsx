@@ -11,24 +11,48 @@ import image3 from "../images/3.png";
 const projects = [
     {
         id: 1,
-        title: "Project 1",
-        description: "Description for Project 1",
+        title: "P-ELCAR V3",
+        description: "Electric Vehicle",
         image: image1,
         href: "#",
     },
 
     {
         id: 2,
-        title: "Project 2",
-        description: "Description for Project 2",
+        title: "Roaster Machine",
+        description: "3kg Roaster Machine for Peanuts",
         image: image2,
         href: "#",
     },
 
     {
         id: 3,
-        title: "Project 3",
-        description: "Description for Project 3",
+        title: "P-ELCAR V2",
+        description: "Electric Vehicle Re-engineer",
+        image: image3,
+        href: "#",
+    },
+
+    {
+        id: 4,
+        title: "A-Frame Pin Installation Machine",
+        description: "Redesigning A-Frame Pin Installation Machine",
+        image: image3,
+        href: "#",
+    },
+
+    {
+        id: 5,
+        title: "Project 5",
+        description: "Description for Project 5",
+        image: image3,
+        href: "#",
+    },
+
+    {
+        id: 6,
+        title: "Project 6",
+        description: "Description for Project 6",
         image: image3,
         href: "#",
     }
@@ -48,26 +72,6 @@ export default function Projects () {
                     <ProjectCard key={project.id} {...project}></ProjectCard>
                 ))}
             </div>
-
-            {/* <div className="flex flex-col lg:flex-row px-10 pt-10 gap-10 col-span-2 justify-between items-center">
-                <div className="flex-1">
-                    <div>Project 1</div>
-                </div>
-                
-                <div className="flex-1">
-                    <div>Project 2</div>
-                </div>
-            </div>
-
-            <div className="flex flex-col lg:flex-row px-10 pt-10 gap-10 col-span-2 justify-between items-center">
-                <div className="flex-1">
-                    <div>Project 3</div>
-                </div>
-                
-                <div className="flex-1">
-                    <div>Project 4</div>
-                </div>
-            </div> */}
         </section>
     )
 }

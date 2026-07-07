@@ -10,7 +10,7 @@ export default function ProjectCard({
   return (
     <Link
       href={href}
-      className="group relative overflow-hidden rounded-xl"
+      className="group relative overflow-hidden"
     >
       <Image
         src={image}
@@ -24,7 +24,7 @@ export default function ProjectCard({
 
       <div className="absolute bottom-0 left-0 p-6 text-white translate-y-6 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
         <h3 className="text-2xl font-semibold">{title}</h3>
-        <p className="mt-2 text-sm text-gray-200">{description}</p>
+        <p className="mt-1 text-sm font-light text-gray-200">{description}</p>
       </div>
     </Link>
   );

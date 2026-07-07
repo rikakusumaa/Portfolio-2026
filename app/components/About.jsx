@@ -1,10 +1,15 @@
+"use client";
+import { useState } from "react";
 import GridBackground from "./Grid";
 import Image from "next/image";
 import profile from "../images/profile.jpg";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { MdArrowRight } from "react-icons/md";
+import ContactDialog from "./ContactDialog";
 
 export default function About () {
+    const [isContactOpen, setIsContactOpen] = useState(false);
+
     return (
         <section id="about" className="relative overflow-hidden pb-10">
             <GridBackground className="fixed inset-0 -z-10 h-full w-full"></GridBackground>
@@ -28,7 +33,14 @@ export default function About () {
                     <p className="font-extralight mb-4 text-[15px]">I am a recent graduate specializing in Mechanical Design and Construction, with a strong foundation in mechanical design, structural analysis, and manufacturing processes. Throughout my academic journey, I developed both technical expertise and practical problem-solving skills through coursework and hands-on projects.</p>
                     <p className="font-extralight my-4 text-[15px]">Beyond academics, I actively participated in student organizations and had the opportunity to serve as President, where I strengthened my leadership, communication, and decision-making abilities. This experience taught me how to collaborate effectively within diverse teams while also leading initiatives to achieve shared objectives.</p>
                     <p className="font-extralight my-4 text-[15px]">I am a highly motivated, adaptable, and detail-oriented individual with strong time management and analytical skills. Eager to begin my professional career in the industrial sector, I am committed to continuously learning, taking on new challenges, and contributing positively through both my technical knowledge and collaborative mindset.</p>
-                    <a href="mailto:nizar.farhan014@gmail.com" className="inline-flex items-center gap-2 relative after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">Contact <IoIosArrowRoundForward size={30} /></a>
+                    <a href="#" className="inline-flex items-center gap-2 relative after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setIsContactOpen(true);
+                        }}>
+                        Contact <IoIosArrowRoundForward size={30} />
+                    </a>
+                    <ContactDialog open={isContactOpen} onOpenChange={setIsContactOpen}></ContactDialog>
                 </div>
             </div>
 
