@@ -1,8 +1,13 @@
 "use client";
 import { useState } from "react";
 import ContactDialog from "./ContactDialog";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+    const pathname = usePathname();
+    const isHome = pathname === "/";
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isContactOpen, setIsContactOpen] = useState(false);
 
@@ -16,19 +21,19 @@ export default function Header() {
 
             <ul className="hidden items-center gap-8 md:flex">
                 <li>
-                    <a href="#" className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
+                    <a href={isHome ? "#" : "/#"} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
                         Home
                     </a>
                 </li>
 
                 <li>
-                    <a href="#about" className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
+                    <a href={isHome ? "#about" : "/#about"} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
                         About
                     </a>
                 </li>
 
                 <li>
-                    <a href="#projects" className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
+                    <a href={isHome ? "/projects" : "/projects"} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
                         Projects
                     </a>
                 </li>
@@ -80,19 +85,19 @@ export default function Header() {
             <div className="flex justify-end border-t border-zinc-800 md:hidden">
                 <ul className="text-right flex flex-col p-6 gap-4">
                 <li>
-                    <a href="#" onClick={() => setIsMenuOpen(!isMenuOpen)} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
+                    <a href={isHome ? "#" : "/#"} onClick={() => setIsMenuOpen(!isMenuOpen)} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
                         Home
                     </a>
                 </li>
 
                 <li>
-                    <a href="#about" onClick={() => setIsMenuOpen(!isMenuOpen)} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
+                    <a href={isHome ? "#about" : "/#about"} onClick={() => setIsMenuOpen(!isMenuOpen)} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
                         About
                     </a>
                 </li>
 
                 <li>
-                    <a href="#projects" onClick={() => setIsMenuOpen(!isMenuOpen)} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
+                    <a href={isHome ? "/projects" : "projects"} onClick={() => setIsMenuOpen(!isMenuOpen)} className="font-light relative inline-block after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-600 after:transition-all after:duration-300 hover:after:w-full">
                         Projects
                     </a>
                 </li>
