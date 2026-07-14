@@ -19,7 +19,7 @@ export default function About () {
             </div>
             
             <div className="flex flex-col lg:flex-row px-10 pt-10 gap-10 lg:gap-60 col-span-2 justify-between items-center lg:items-start">
-                <div className="relative shrink-0 w-full h-[500px] overflow-hidden">
+                <div className="relative shrink-0 w-full h-[500px] overflow-hidden px-10">
                     <Image 
                     src={profile}
                     alt=""
