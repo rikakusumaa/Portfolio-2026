@@ -3,10 +3,11 @@ import GridBackground from "@/app/components/Grid";
 import { projects } from "@/app/data/project";
 import ProjectCard from "../components/ProjectCard";
 import Header from "../components/Header";
+import Footer from "@/app/components/Footer";
 
 export default function ProjectsExplainer () {
     return (
-        <section className="relative overflow-hidden pb-10">
+        <section className="relative">
             <Header></Header>
             <div className="fixed inset-0 -z-10 h-full w-full">
                 <GridBackground></GridBackground>
@@ -22,6 +23,7 @@ export default function ProjectsExplainer () {
                 <ProjectCard key={project.slug} {...project}></ProjectCard>
                 ))}
             </div>
+            <Footer></Footer>
         </section>
     );
 }

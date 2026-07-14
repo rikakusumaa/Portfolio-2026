@@ -2,7 +2,7 @@
 import { useState } from "react";
 import GridBackground from "./Grid";
 import Image from "next/image";
-import profile from "../images/profile.jpg";
+import profile from "../images/profile.jpeg";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { MdArrowRight } from "react-icons/md";
 import ContactDialog from "./ContactDialog";
@@ -19,12 +19,11 @@ export default function About () {
             </div>
             
             <div className="flex flex-col lg:flex-row px-10 pt-10 gap-10 lg:gap-60 col-span-2 justify-between items-center lg:items-start">
-                <div className="shrink-0">
+                <div className="relative shrink-0 w-[400px] h-[500px] overflow-hidden">
                     <Image 
                     src={profile}
                     alt=""
-                    width={400}
-                    height={550}
+                    fill
                     className="object-cover">
                     </Image>
                 </div>
