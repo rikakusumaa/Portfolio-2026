@@ -37,7 +37,7 @@ export default async function ProjectPage({ params }: Props) {
         </div>
 
         <div className="flex flex-col md:flex-col lg:flex-row pt-5 gap-5 lg:gap-10 col-span-2 justify-between items-center lg:items-start">
-          <div className="relative w-full h-[300px] md:w-[500px] md:h-[400px] lg:w-[700px] lg:h-[550px] overflow-hidden shrink-0">
+          <div className="relative w-full h-[300px] md:w-[500px] md:h-[400px] lg:w-[700px] lg:h-[550px] px-10 overflow-hidden shrink-0">
             <Image
                 src={project.image}
                 alt=""
